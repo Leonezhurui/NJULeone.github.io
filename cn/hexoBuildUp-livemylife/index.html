@@ -230,7 +230,7 @@
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
       </button>
-      <a class="navbar-brand" href="/">Leonezhurui的小天地</a>
+      <a class="navbar-brand" href="/">Leonezhurui小天地</a>
     </div>
 
     <!-- Collect the nav links, forms, and other content for toggling -->
@@ -258,17 +258,6 @@
           
           
           <li>
-            <a href="/tags/">
-              
-              标签
-              
-              
-            </a>
-          </li>
-          
-          
-          
-          <li>
             <a href="/archive/">
               
               归档
@@ -283,6 +272,17 @@
             <a href="/categories/">
               
               分类
+              
+              
+            </a>
+          </li>
+          
+          
+          
+          <li>
+            <a href="/tags/">
+              
+              标签
               
               
             </a>
@@ -352,19 +352,19 @@
     .body--light {
       /* intro-header */
       --intro-header-background-image-url-home: url('/img/header_img/newhome_bg.jpg');
-      --intro-header-background-image-url-post: url('img/header_img/wooden-bench.jpg');
-      --intro-header-background-image-url-page: url('/img/header_img/wooden-bench.jpg');
+      --intro-header-background-image-url-post: url('/img/header_img/wooden-bench.jpg');
+      --intro-header-background-image-url-page: url('//img/header_img/wooden-bench.jpg');
     }
     .body--dark {
       --intro-header-background-image-url-home: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.2)), url('/img/header_img/newhome_bg.jpg');
-      --intro-header-background-image-url-post: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.2)), url('img/header_img/wooden-bench.jpg');
-      --intro-header-background-image-url-page: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.2)), url('/img/header_img/wooden-bench.jpg');
+      --intro-header-background-image-url-post: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.2)), url('/img/header_img/wooden-bench.jpg');
+      --intro-header-background-image-url-page: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.2)), url('//img/header_img/wooden-bench.jpg');
     }
 
     header.intro-header {
        /*post*/
         background-image: var(--intro-header-background-image-url-post);
-        /* background-image: url('img/header_img/wooden-bench.jpg'); */
+        /* background-image: url('/img/header_img/wooden-bench.jpg'); */
       
     }
 
@@ -410,7 +410,7 @@
             </span>
             <div class="blank_box"></div>
             <span class="meta">
-              Words <span class="post-count">1.2k</span> In Total
+              Words <span class="post-count">1.3k</span> In Total
             </span>
             <div class="blank_box"></div>
             <!-- WordCount end -->
@@ -472,10 +472,14 @@
       <!-- Post Container -->
       <div class="col-lg-8 col-lg-offset-1 col-md-10 col-md-offset-1 post-container">
 
-        <p>使用Hexo搭建个人网站，采用LiveMyLife主题；作为Leonezhurui个人网站的第一篇文章。</p>
+        <p>摘要：</p>
+<ol>
+<li>作为Leonezhurui个人网站的第一篇文章；</li>
+<li>采用LiveMyLife主题，使用Hexo搭建个人网站的步骤和注意点。</li>
+</ol>
 <span id="more"></span>
 <h1>hexo搭建个人网站——livemylife篇</h1>
-<h2 id="1-可部署运行的网站">1. 可部署运行的网站</h2>
+<h2 id="可部署运行的网站">可部署运行的网站</h2>
 <p>抛开内容不谈，咱们先搭建起一个可在线上访问的hexo网站。</p>
 <h3 id="新建hexo项目">新建hexo项目</h3>
 <blockquote>
@@ -527,9 +531,9 @@
 <p>由于上面没有进行任何内容上的配置，所以显示的仍然是LiveMyLife作者的信息。<br>
 总之，先能跑通，内容再改。</p>
 </blockquote>
-<h2 id="2-内容配置">2. 内容配置</h2>
+<h2 id="内容配置">内容配置</h2>
 <p>接下来进行内容配置</p>
-<h3 id="2-1-新建文章，并发布">2.1 新建文章，并发布</h3>
+<h3 id="新建文章，并发布">新建文章，并发布</h3>
 <p>一般，新建文章的方法：执行命令<code>hexo new 'xxx'</code>，就会在<code>source/_post</code>目录下生成对应的md文件和文件夹。</p>
 <p>注意：由于LiveMyLife主题支持多语言功能，且<code>_config.yml</code>配置中的启用了多语言功能，<code>langselect.enable=true</code>。</p>
 <figure class="highlight yml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">langselect:</span></span><br><span class="line">  <span class="attr">enable:</span> <span class="literal">true</span></span><br><span class="line">  <span class="attr">options:</span></span><br><span class="line">    <span class="attr">en:</span> <span class="string">English</span></span><br><span class="line">    <span class="attr">cn:</span> <span class="string">简体中文</span></span><br></pre></td></tr></table></figure>
@@ -549,6 +553,7 @@
 </ol>
 <p>相对路径，在<code>_config.yml</code>配置文件中设置<code>post_asset_folder: true</code>。</p>
 <p>修改之后会开启 Hexo 的文章资源文件管理功能。Hexo 将会在我们每一次通过 <code>hexo new &lt;title&gt;</code> 命令创建新文章时自动创建一个同名文件夹，于是便可以将文章所引用的相关资源放到这个同名文件夹下，然后通过相对路径引用。例如，把一个 example.jpg 图片放在了这个同名文件夹中，使用相对路径的常规 markdown 语法 <code>![](./example.jpg)</code>即可访问。</p>
+<p>在<code>Front-matter</code>中指定header-img时也是一样，可以指定当前md文件对应的同名文件夹中的图片，也可以指定<code>source/img/header-img</code>中的图片。(只要相对URL正确即可)</p>
 
 
         <hr>
@@ -694,7 +699,7 @@
         <div id="toc" class="toc-article">
         <strong class="toc-title">目录</strong>
         
-          <ol class="toc-nav"><li class="toc-nav-item toc-nav-level-1"><a class="toc-nav-link"><span class="toc-nav-number">1.</span> <span class="toc-nav-text">hexo搭建个人网站——livemylife篇</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#1-%E5%8F%AF%E9%83%A8%E7%BD%B2%E8%BF%90%E8%A1%8C%E7%9A%84%E7%BD%91%E7%AB%99"><span class="toc-nav-number">1.1.</span> <span class="toc-nav-text">1. 可部署运行的网站</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#%E6%96%B0%E5%BB%BAhexo%E9%A1%B9%E7%9B%AE"><span class="toc-nav-number">1.1.1.</span> <span class="toc-nav-text">新建hexo项目</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#%E6%96%B0%E5%BB%BAgithub%E4%BB%93%E5%BA%93%EF%BC%8C%E9%85%8D%E7%BD%AE%E5%9F%9F%E5%90%8D"><span class="toc-nav-number">1.1.2.</span> <span class="toc-nav-text">新建github仓库，配置域名</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#%E8%AE%BE%E7%BD%AE%E4%B8%BB%E9%A2%98%E3%80%81%E9%85%8D%E7%BD%AE%E4%BF%A1%E6%81%AF"><span class="toc-nav-number">1.1.3.</span> <span class="toc-nav-text">设置主题、配置信息</span></a></li></ol></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#2-%E5%86%85%E5%AE%B9%E9%85%8D%E7%BD%AE"><span class="toc-nav-number">1.2.</span> <span class="toc-nav-text">2. 内容配置</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#2-1-%E6%96%B0%E5%BB%BA%E6%96%87%E7%AB%A0%EF%BC%8C%E5%B9%B6%E5%8F%91%E5%B8%83"><span class="toc-nav-number">1.2.1.</span> <span class="toc-nav-text">2.1 新建文章，并发布</span></a></li></ol></li></ol></li></ol>
+          <ol class="toc-nav"><li class="toc-nav-item toc-nav-level-1"><a class="toc-nav-link"><span class="toc-nav-number">1.</span> <span class="toc-nav-text">hexo搭建个人网站——livemylife篇</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#%E5%8F%AF%E9%83%A8%E7%BD%B2%E8%BF%90%E8%A1%8C%E7%9A%84%E7%BD%91%E7%AB%99"><span class="toc-nav-number">1.1.</span> <span class="toc-nav-text">可部署运行的网站</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#%E6%96%B0%E5%BB%BAhexo%E9%A1%B9%E7%9B%AE"><span class="toc-nav-number">1.1.1.</span> <span class="toc-nav-text">新建hexo项目</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#%E6%96%B0%E5%BB%BAgithub%E4%BB%93%E5%BA%93%EF%BC%8C%E9%85%8D%E7%BD%AE%E5%9F%9F%E5%90%8D"><span class="toc-nav-number">1.1.2.</span> <span class="toc-nav-text">新建github仓库，配置域名</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#%E8%AE%BE%E7%BD%AE%E4%B8%BB%E9%A2%98%E3%80%81%E9%85%8D%E7%BD%AE%E4%BF%A1%E6%81%AF"><span class="toc-nav-number">1.1.3.</span> <span class="toc-nav-text">设置主题、配置信息</span></a></li></ol></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#%E5%86%85%E5%AE%B9%E9%85%8D%E7%BD%AE"><span class="toc-nav-number">1.2.</span> <span class="toc-nav-text">内容配置</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#%E6%96%B0%E5%BB%BA%E6%96%87%E7%AB%A0%EF%BC%8C%E5%B9%B6%E5%8F%91%E5%B8%83"><span class="toc-nav-number">1.2.1.</span> <span class="toc-nav-text">新建文章，并发布</span></a></li></ol></li></ol></li></ol>
         
         </div>
       </aside>
